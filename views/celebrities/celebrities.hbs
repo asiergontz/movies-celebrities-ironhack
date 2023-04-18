@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Occupation</th>
+      <th scope="col">Catchphrase</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each celebrities}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.occupation}}</td>
+        <td>{{this.catchphrase}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

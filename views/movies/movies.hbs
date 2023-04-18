@@ -1,0 +1,28 @@
+<h2>List of all movies</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Plot</th>
+      <th scope="col">Cast</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each allMovies}}
+      <tr>
+        <td><a href="/movies/{{this._id}}">{{this.title}}</a></td>
+        <td>{{this.genre}}</td>
+        <td>{{this.plot}}</td>
+        <td>
+          <ul>
+            {{#each this.cast}}
+              <li>{{this.name}}</li>
+            {{/each}}
+          </ul>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

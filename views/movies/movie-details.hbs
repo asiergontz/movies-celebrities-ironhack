@@ -1,0 +1,13 @@
+<h2>{{movie.title}}</h2>
+<p>Genre: {{movie.genre}}</p>
+<p>{{movie.plot}}</p>
+<h3>Cast</h3>
+<ul>
+  {{#each movie.cast}}
+    <li>{{this.name}}</li>
+  {{/each}}
+</ul>
+<a class="btn btn-primary text-white" href="/movies/{{movie._id}}/edit">Edit
+  movie</a>
+<a class="btn btn-danger text-white" href="/movies/{{movie._id}}/delete">Delete
+  movie</a>

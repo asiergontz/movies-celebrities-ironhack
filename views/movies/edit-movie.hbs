@@ -1,0 +1,35 @@
+<h2>Edit movie</h2>
+<form action="/movies/create" method="POST">
+  <input
+    type="text"
+    name="title"
+    id="title"
+    value="{{movie.title}}"
+    class="form-control mb-2"
+  />
+  <input
+    type="text"
+    name="genre"
+    id="genre"
+    value="{{movie.genre}}"
+    class="form-control mb-2"
+  />
+  <input
+    type="text"
+    name="plot"
+    id="plot"
+    value="{{movie.plot}}"
+    class="form-control mb-2"
+  />
+  <label for="cast">Cast</label>
+  <select name="cast" id="cast" multiple>
+    {{#each actors}}
+      <option value="{{this._id}}" 
+        {{#if movie.cast.includes this}}
+          selected
+        {{/if}}
+      >{{this.name}}</option>
+    {{/each}}
+  </select>
+  <input type="submit" value="Create movie" class="btn btn-primary" />
+</form>
