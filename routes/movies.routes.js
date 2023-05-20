@@ -53,7 +53,6 @@ router.get("/:id/delete", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-// Edit movie
 router.get("/:id/edit", async (req, res) => {
   const actors = await Celebrity.find();
   Movie.findById(req.params.id)
